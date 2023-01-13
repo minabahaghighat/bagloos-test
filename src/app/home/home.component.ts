@@ -38,9 +38,12 @@ export class HomeComponent implements OnInit {
 
   buildForm() {
     this.registerForm = new FormGroup({
-      name: new FormControl(''),
+      firstname: new FormControl(''),
       lastName: new FormControl(''),
       age: new FormControl(''),
+      address: new FormControl(''),
+      birthday: new FormControl(''),
+      accessLevelType: new FormControl(''),
     });
     const formGroupFields = this.getFormControlsFields();
     this.registerForm = new FormGroup(formGroupFields);
@@ -99,7 +102,13 @@ handleSubmitForm(){
 handleDeleteUserInfo(userInfo:any){
     this.registerUserInfo.filter((items:any)=>{
         if(userInfo.id==items.id){
-          this.registerUserInfo.splice(items, 1);
+          if(window.confirm('Are you sure, you want to update?')){
+            this.userService.deleteUserInfoRegister(items.id).subscribe((data)=>{
+              this.getUserInfoRegister();
+              
+            })
+
+          }
         }else{
           return
         }

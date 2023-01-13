@@ -37,4 +37,7 @@ export class UserService {
       userInfo
      
       )}
+ deleteUserInfoRegister(id:number){
+        return this.http.delete(this.baseUrl+'/registerForm/'+id);
+ }
 }
