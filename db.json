@@ -1,0 +1,56 @@
+{
+  "formModel": {
+    "firstname": {
+      "type": "text",
+      "value": "",
+      "label": "FirstName",
+      "rules": {
+        "required": true
+      }
+    },
+    "lastname": {
+      "type": "text",
+      "value": "",
+      "label": "LastName",
+      "rules": {
+        "required": true
+      },
+      "accessLevel": "admin"
+    },
+    "address": {
+      "type": "text",
+      "value": "",
+      "label": "Address",
+      "rules": {
+        "required": true
+      }
+    },
+    "age": {
+      "type": "number",
+      "value": "",
+      "label": "age",
+      "rules": {
+        "required": true
+      }
+    },
+    "birthDay": {
+      "type": "date",
+      "value": "",
+      "label": "Birthday",
+      "rules": {
+        "required": true
+      }
+    },
+    "accessLevelType": {
+      "label": "access level Type(admin or user)",
+      "value": "",
+      "type": "text",
+      "rules": {
+        "required": true
+      }
+    }
+  },
+  "registerForm": [
+   
+  ]
+}
